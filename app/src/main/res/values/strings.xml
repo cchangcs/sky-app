@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Sky</string>
+    <string name="action_settings">Settings</string>
+    <string name="disconnected">Disconnected</string>
+    <string name="up">↑</string>
+    <string name="right">→</string>
+    <string name="left">←</string>
+    <string name="down">↓</string>
+    <string name="enable">enable</string>
+    <string name="disable">disable</string>
+    <string name="takeOff">takeOff</string>
+    <string name="land">land</string>
+    <string name="title_activity_splish">SplishActivity</string>
+    <string name="title_activity_connect">ConnectActivity</string>
+    <string name="title_activity_introduction">IntroductionActivity</string>
+</resources>

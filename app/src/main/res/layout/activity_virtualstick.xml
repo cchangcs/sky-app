@@ -1,0 +1,353 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="1">
+
+    <!--获取无人机的视频-->
+    <TextureView
+        android:id="@+id/video_previewer_surface"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1.03"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/relativeLayout">
+    </TextureView>
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="60dp"
+       android:background="#ff3097fd"
+       android:orientation="horizontal"
+       android:id="@+id/relativeLayout"
+       android:layout_alignParentTop="true"
+       android:layout_alignParentStart="true">
+       <ImageView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:src="@drawable/top"/>
+
+       <LinearLayout
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal"
+           android:layout_marginRight="30dp"
+           android:layout_gravity="center_vertical"
+           android:layout_marginLeft="30dp"
+           android:id="@+id/linearLayout">
+
+           <RelativeLayout
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content">
+               <TextView
+                   android:id="@+id/data_text"
+                   android:layout_width="200dp"
+                   android:layout_height="50dp"
+                   android:text="选择任务"
+                   android:textSize="20sp"
+                   android:gravity="center"
+                   android:background="@drawable/text_bg" />
+
+               <Spinner
+                   android:id="@+id/spinner"
+                   android:layout_width="200dp"
+                   android:layout_height="50dp"
+                   android:background="@drawable/text_bg"
+                   android:layout_alignParentStart="true"
+                   android:layout_alignParentTop="true" />
+
+           </RelativeLayout>
+
+
+
+           <Button
+               android:layout_marginLeft="10dp"
+               android:layout_width="60dp"
+               android:layout_height="50dp"
+               android:id="@+id/send_button"
+               android:gravity="center"
+               android:background="@drawable/enable_bg_selector"
+               android:text="发送" />
+
+
+       </LinearLayout>
+
+
+       <Button
+           android:layout_width="100dp"
+           android:layout_height="50dp"
+           android:id="@+id/enableButton"
+           android:text="获取权限"
+           android:layout_gravity="center_vertical"
+           android:background="@drawable/enable_bg_selector"
+           android:layout_marginLeft="10dp"/>
+
+       <Button
+           android:layout_width="100dp"
+           android:layout_marginLeft="30dp"
+           android:layout_height="50dp"
+           android:layout_gravity="center_vertical"
+           android:id="@+id/disableButton"
+           android:background="@drawable/enable_bg_selector"
+           android:text="释放权限"
+           android:layout_alignParentTop="true"
+           android:layout_alignParentEnd="true"
+           android:layout_marginRight="10dp"/>
+
+
+   </LinearLayout>
+
+    <!--用于实现无人机的飞行控制操作-->
+    <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="22dp"
+            android:id="@+id/relativeLayout3">
+            <RelativeLayout
+                android:layout_width="170dp"
+                android:layout_height="170dp"
+                android:background="@drawable/back3_selector"
+                android:layout_marginLeft="10dp"
+                android:layout_alignParentTop="true">
+
+                <Button
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:background="@drawable/bg_selector"
+                    android:id="@+id/takeOffButton"
+                    android:text="起飞"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true" />
+                />
+
+
+                    <Button
+                        style="@style/control_button_style"
+                        android:text="▲"
+                        android:textColor="@drawable/text_color_selector"
+                        android:id="@+id/leftUpButton"
+                        android:layout_above="@+id/takeOffButton"
+                        android:layout_alignStart="@+id/takeOffButton"
+                        />
+                <Button
+                    style="@style/control_button_style"
+                    android:text="▼"
+                    android:textColor="@drawable/text_color_selector"
+                    android:id="@+id/leftDownButton"
+                    android:layout_below="@+id/takeOffButton"
+                    android:layout_toEndOf="@+id/leftLeftButton" />
+
+                <Button
+                    style="@style/control_button_style"
+                    android:text="◀"
+                    android:textColor="@drawable/text_color_selector"
+                    android:id="@+id/leftLeftButton"
+                    android:layout_below="@+id/leftUpButton"
+                    android:layout_toStartOf="@+id/takeOffButton" />
+
+                <Button
+                    style="@style/control_button_style"
+                    android:text="▶"
+                    android:textColor="@drawable/text_color_selector"
+                    android:id="@+id/leftRightButton"
+                    android:layout_marginRight="5dp"
+                    android:layout_below="@+id/leftUpButton"
+                    android:layout_toEndOf="@+id/takeOffButton" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="170dp"
+                android:layout_height="170dp"
+                android:background="@drawable/back3_selector"
+                android:layout_marginRight="10dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true">
+
+                <Button
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:background="@drawable/bg_selector"
+                    android:id="@+id/landButton"
+                    android:text="降落"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true" />
+                <Button
+                    style="@style/control_button_style"
+                    android:text="▲"
+                    android:textColor="@drawable/text_color_selector"
+                    android:id="@+id/rightUpButton"
+                    android:layout_above="@+id/landButton"
+                    android:layout_toEndOf="@+id/rightLeftButton" />
+
+                <Button
+                    style="@style/control_button_style"
+                    android:text="▼"
+                    android:textColor="@drawable/text_color_selector"
+                    android:id="@+id/rightDownButton"
+                    android:layout_toStartOf="@+id/rightRightButton"
+                    android:layout_below="@+id/landButton" />
+
+                <Button
+                    style="@style/control_button_style"
+                    android:text="◀"
+                    android:textColor="@drawable/text_color_selector"
+                    android:id="@+id/rightLeftButton"
+                    android:layout_below="@+id/rightUpButton"
+                    android:layout_alignParentStart="true" />
+
+                <Button
+                    style="@style/control_button_style"
+                    android:text="▶"
+                    android:textColor="@drawable/text_color_selector"
+                    android:id="@+id/rightRightButton"
+                    android:layout_below="@+id/rightUpButton"
+                    android:layout_toEndOf="@+id/landButton" />
+            </RelativeLayout>
+        </RelativeLayout>
+<!--实现spinner弹出框-->
+  <!--  <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/show_info"
+        android:text="+"
+        android:textSize="45sp"
+        android:background="@null"
+        android:textColor="@drawable/text_color_selector"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="61dp"/>-->
+
+    <!--<ImageView-->
+        <!--android:layout_width="45dp"-->
+        <!--android:layout_height="45dp"-->
+        <!--android:src="@drawable/show_info_circle"-->
+        <!--android:id="@+id/imageView2"-->
+        <!--android:layout_marginTop="66dp"/>-->
+<!--用于画矩形框-->
+<!--    <com.yichudu.virtualstick.view.DrawImageView
+        android:id="@+id/paint_iv"
+        android:layout_width="300dp"
+        android:layout_height="320dp"
+        android:layout_marginStart="162dp"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@+id/show_info" />-->
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true">
+
+           <LinearLayout
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:orientation="horizontal">
+               <!--高度数据-->
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:textSize="20sp"
+                   android:layout_height="wrap_content"
+                   android:textColor="#FF99FF"
+                   android:text="高度:"/>
+               <TextView
+                   android:id="@+id/tv_height"
+                   android:layout_width="wrap_content"
+                   android:textSize="20sp"
+                   android:textColor="#FFCC66"
+                   android:layout_height="wrap_content"/>
+           </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <!--剩余电量-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#FF99FF"
+                    android:textSize="20sp"
+                    android:text="电量:"/>
+                <TextView
+                    android:id="@+id/tv_battery"
+                    android:layout_width="wrap_content"
+                    android:textSize="20sp"
+                    android:textColor="#FFCC66"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+           <LinearLayout
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:orientation="horizontal">
+               <!--GPS-->
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:textColor="#FF99FF"
+                   android:textSize="20sp"
+                   android:text="GPS:"/>
+               <TextView
+                   android:id="@+id/tv_gps"
+                   android:layout_width="wrap_content"
+                   android:textSize="20sp"
+                   android:textColor="#FFCC66"
+                   android:layout_height="wrap_content"/>
+
+           </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!--速度-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:textColor="#FF99FF"
+                    android:textSize="20sp"
+                    android:layout_height="wrap_content"
+                    android:text="速度:"/>
+                <TextView
+                    android:id="@+id/tv_speed_backforeward"
+                    android:textColor="#FFCC66"
+                    android:textSize="20sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:id="@+id/tv_speed_leftright"
+                    android:textColor="#FFCC66"
+                    android:textSize="20sp"
+                    android:layout_marginLeft="3dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:id="@+id/tv_speed_updown"
+                    android:layout_marginLeft="3dp"
+                    android:layout_width="wrap_content"
+                    android:textSize="20sp"
+                    android:textColor="#FFCC66"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <!--姿态-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#FF99FF"
+                    android:textSize="20sp"
+                    android:text="姿态:"/>
+                <TextView
+                    android:id="@+id/tv_yaw"
+                    android:layout_width="300dp"
+                    android:textColor="#FFCC66"
+                    android:textSize="20sp"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+        </LinearLayout>
+</RelativeLayout>
+

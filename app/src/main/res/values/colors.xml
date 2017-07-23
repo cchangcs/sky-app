@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black_overlay">#66000000</color>
+    <color name="pow_der_blue"> #B0E0E6</color>
+    <color name="Dark_khaki">#BDB76B</color>
+    <color name="beige"> #D9D9F3</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="gray">#C0C0C0</color>
+    <color name="dark_gray">#6c6b6b </color>
+    <color name="color1">#fffbf0</color>
+    <color name="color2">#B0C4DE</color>
+</resources>

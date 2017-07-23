@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.yichudu.virtualstick.activity.ConnectActivity"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:weightSum="1">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/top"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"/>
+
+    <View android:layout_height="1px"
+        android:layout_width="match_parent"
+        android:background="@color/gray"
+        android:layout_marginTop="15dp"></View>
+
+    <ImageView
+        android:layout_width="212dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/text1"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="342dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="0.35"
+        android:background="@drawable/w" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/gray"
+        android:layout_marginTop="25dp"/>
+
+    <TextView
+        android:id="@+id/connect_introduction"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:clickable="true"
+        android:textSize="17sp"
+        android:text="如何连接"
+        android:textColor="@drawable/tv_connect_text_selector"
+        android:background="@drawable/tv_connect_selector"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp" />
+
+</LinearLayout>

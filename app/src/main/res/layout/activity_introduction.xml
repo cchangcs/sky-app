@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:weightSum="1">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <ImageView
+            android:id="@+id/back_img"
+            android:layout_width="30dp"
+            android:layout_height="25dp"
+            android:src="@drawable/back_img_selector"
+            android:layout_gravity="center_vertical"/>
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:orientation="vertical">
+           <ImageView
+               android:layout_width="160dp"
+               android:layout_height="wrap_content"
+               android:src="@drawable/link"
+               android:layout_gravity="center_horizontal"
+               android:layout_marginTop="10dp"/>
+       </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/gray"
+        android:layout_marginTop="5dp"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="①"
+                    android:textSize="25sp"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="开启遥控器"
+                    android:textSize="20sp"
+                    android:textColor="@color/black"/>
+
+            </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="短按电源按钮一次，松开，然后长按按钮2秒。"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/dark_gray"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:orientation="horizontal"
+                android:layout_marginTop="30dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="②"
+                    android:textSize="25sp"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="开启飞机电源"
+                    android:textSize="20sp"
+                    android:textColor="@color/black"/>
+
+            </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="短按电源按钮一次，松开，然后长按按钮2秒。"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/dark_gray"/>
+           <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:orientation="horizontal"
+               android:layout_marginTop="30dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="③"
+                    android:textSize="25sp"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="连接你的遥控器和移动设备"
+                    android:textSize="20sp"
+                    android:textColor="@color/black"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="使用USB线讲你的遥控器和移动设备连接起来。"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/dark_gray"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:orientation="horizontal"
+                android:layout_marginTop="30dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="④"
+                    android:textSize="25sp"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="连接成功"
+                    android:textSize="20sp"
+                    android:textColor="@color/black"/>
+
+            </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="界面显示飞机处于已连接状态，你即可点击飞行器相机打开相机。"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/dark_gray"/>
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>
