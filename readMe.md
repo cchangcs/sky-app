@@ -1,4 +1,6 @@
-aircraft:dji phantom 3 advanced
-phone:android 5.0 lollipop
-
-use app to control aircraft instead of the remote controller.
+APP基于DJI Mobile SDK，实现了
+      获取和释放遥控器的控制权限
+      模拟遥控器的飞行控制操作
+      视频回传
+      数据透传
+      获取无人机的飞行参数
