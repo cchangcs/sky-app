@@ -9,7 +9,7 @@ APP 界面如下：
 
 闪屏页：
 
-![github](https://github.com/MrJoeyM/sky-app/blob/master/2.jpg?strip%7CimageView2/2/w/100 "github")  
+![github](https://github.com/MrJoeyM/sky-app/blob/master/2.jpg "github")  
 
 连接提示页：
 ![github](https://github.com/MrJoeyM/sky-app/blob/master/3.jpg "github")  
